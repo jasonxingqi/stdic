@@ -1,5 +1,5 @@
-from sequencefilter import *
-from imagefilter import *
+from sequencefilters.sequencefilter import *
+from imagefilters.imagefilter import *
 from imageobject import *
 from expressionfolder import ExpressionFolder
 
