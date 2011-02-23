@@ -94,6 +94,10 @@ class FolderAnalyzer:
     def analyze(self):
         
         for (image1, image2) in self.pairiterator:
+            try:
+                print "Analyzing pictures number %s and %s." % (image1.picturenumber, image2.picturenumber)
+            except AttributeError:
+                pass
             dffname = self.namegenerator.generatename(image1, image2)
             if not self.overwrite:
                 if self.dffchecker.checkExistence(dffname):
